@@ -6,17 +6,32 @@
     */
 
     //ENTRADA
-    const numeroprimo = Number(prompt(`Informe um número primo:`));
+    const numeroprimo = Number(prompt("Informe um número:"));
 
-    let numeroprimo1 = [];
+    let primo = true; 
 
     //PROCESSAMENTO
-    for(numero = 1; numero <= 1; numero++) {
-     if(numeroprimo % 1 && numeroprimo % numeroprimo){
-        numeroprimo1.push(numeroprimo)
-     }
+    if (numeroprimo < 2) {
+    primo = false;
+    } else {
+       
+        for (let numero = 2; numero <= Math.sqrt(numeroprimo); numero++) {
+            if (numeroprimo % numero === 0) {
+                primo = false; 
+                break; 
+            }
+        }
     }
-    document.write(`o numero ${numeroprimo1}`)
-    //SAÍDA
 
+    //SAÍDA
+    if (primo) {
+        document.write(`O número ${numeroprimo} é primo.`);
+    } else {
+        document.write(`O número ${numeroprimo} não é primo.`);
+    }
+
+
+
+
+   
 </script>

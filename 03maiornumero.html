@@ -15,10 +15,16 @@
 
     let numero = [n1, n2, n3, n4, n5];
 
-    const maiornumero = Math.max(...numero);
+    let maiornumeros = numero[0];
 
+    for (let numeros = 1; numeros < numeros.length; numeros++) {
+        if (numero[numeros] > maiorNumero) {
+            maiorNumero = numeros[numeros];  
+        }
+    
+    }
 
-    document.write(`O maior numero é ${maiornumero}`)
+    document.write(`O maior número é ${maiornumeros}`)
     //PROCESSAMENTO
 
     
