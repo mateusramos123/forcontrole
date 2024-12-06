@@ -8,11 +8,42 @@
     */
 
     //ENTRADA
+    const nome1 = prompt(`Informe o nome do(a) primeiro(a) candidato(a)`);
+    const nome2 = prompt(`Informe o nome do(a) Segundo(a) candidato(a)`);
+    const nome3 = prompt(`Informe o nome do(a) Terceiro(a) candidato(a)`);
+    const votantes = Number(prompt(`Informe o número de alunos votantes:`));
 
-
+  let  soma1 = 0;
+  let  soma2 = 0;
+  let  soma3 = 0;
     //PROCESSAMENTO
+    for(contador = 1; contador <= votantes; contador++) {
+        let voto = Number(prompt(`Informe qual candidato você quer votar: 1, 2 ou 3`))
+        ;
+
+        if(voto === 1) {
+            soma1 +=1;
+        }
+        else if (voto ===2) {
+            soma2 +=1;
+        }
+        else if (voto === 3){
+            soma3 +=1;
+        }
+        else{
+            alert(`Informe um número válido: 1, 2 ou 3`);
+            contador--;
+        }
+    }
+
+    porcentagem1 = (soma1 * 100) / votantes;
+    porcentagem2 = (soma2 * 100) / votantes;
+    porcentagem3 = (soma3 * 100) / votantes;
 
 
     //SAÍDA
-
+    document.write(`O resultado da votação é: <br> <br> 
+    ${nome1}: ${soma1} votos e ${porcentagem1.toFixed(2)}% de votos <br> <br>
+    ${nome2}: ${soma2} votos e ${porcentagem2.toFixed(2)}% de votos <br> <br>
+    ${nome3}: ${soma3} votos e ${porcentagem3.toFixed(2)}% de votos`); 
 </script>
