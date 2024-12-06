@@ -6,11 +6,29 @@
     */
 
     //ENTRADA
+    let populacao = 50000;
+    let crescimento = 0.015;
+
+    let populacao5anos = populacao;
+    let populacao10anos = populacao;    
+
+    
 
     
     //PROCESSAMENTO
     
+    for(let ano = 1; ano <= 5; ano++) {
+         populacao5anos *= (1 + crescimento);
+    }
+
+    for(let ano = 1; ano <= 10; ano++) {
+        populacao10anos *= (1 + crescimento);
+    }
+
+    let anos5 = Math.round(populacao5anos);
+    let anos10 = Math.round(populacao10anos)
 
     //SAÍDA
-
+    document.write(`A população prevista para daqui a 5 anos será: ${anos5} <br>`) ;
+    document.write(`A população prevista para daqui a 10 anos será: ${anos10} <br> `);
 </script>
