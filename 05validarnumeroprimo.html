@@ -8,30 +8,24 @@
     //ENTRADA
     const numeroprimo = Number(prompt("Informe um número:"));
 
-    let primo = true; 
+   
 
     //PROCESSAMENTO
-    if (numeroprimo < 2) {
-    primo = false;
-    } else {
-       
-        for (let numero = 2; numero <= Math.sqrt(numeroprimo); numero++) {
-            if (numeroprimo % numero === 0) {
-                primo = false; 
-                break; 
-            }
+    let divisivel = 0;
+    
+    for(contador = 2; contador < numeroprimo; contador++) {
+        if (numeroprimo % contador == 0) {
+            divisivel++;
         }
     }
 
-    //SAÍDA
-    if (primo) {
-        document.write(`O número ${numeroprimo} é primo.`);
-    } else {
-        document.write(`O número ${numeroprimo} não é primo.`);
+    if (divisivel == 0) { 
+        document.write(`O número ${numeroprimo} é primo.`) 
     }
-
-
-
+    else {
+        document.write(`O número ${numeroprimo} Não é primo.`)
+    }
 
    
 </script>
+
